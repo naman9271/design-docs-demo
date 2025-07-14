@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KubeStellar Docs</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <div class="logo">Logo</div>
+    <nav>
+      <a href="#">Docs</a>
+      <a href="#">Community</a>
+      <a href="#">Contribute</a>
+      <a href="#">Blog</a>
+      <a href="#">Release <i class="fa fa-caret-down"></i></a>
+      <a href="#">English <i class="fa fa-caret-down"></i></a>
+      <a href="#">Github <i class="fab fa-github"></i></a>
+    </nav>
+  </header>
+  <div class="main-layout">
+    <aside class="sidebar">
+      <div class="search-wrapper">
+        <input type="text" placeholder="Search.." class="search"/>
+        <span class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-moon"></i></span>
+      </div>
+      <ul class="side-nav">
+        <li class="selected">Introduction</li>
+        <li>Getting Started</li>
+        <li>Guides</li>
+        <li>Releasing</li>
+      </ul>
+    </aside>
+    <main>
+      <div class="doc-header">
+        <div class="doc-header-group">
+          <span class="icon"><i class="fas fa-home"></i></span>
+          <span class="icon chevron"><i class="fas fa-chevron-right"></i></span>
+          <span class="introduction-tag">Introduction</span>
+          <span class="release">Release - 0.28.0</span>
+        </div>
+        <div class="doc-header-icons">
+          <a href="https://github.com/kubestellar/docs/blob/main/docs/content/readme.md" target="_blank" class="icon"><i class="fas fa-file-alt"></i></a>
+          <a href="https://github.com/kubestellar/docs/edit/main/docs/content/readme.md" target="_blank" class="icon"><i class="fas fa-pen"></i></a>
+        </div>
+      </div>
+      <div id="markdown-content" class="markdown-body"></div>
+    </main>
+    <aside class="toc">
+      <div class="toc-header">Table of Contents</div>
+      <ul id="toc-list"></ul>
+    </aside>
+  </div>
+  <footer>
+    <div class="footer-content">
+      <span>© 2023 KubeStellar. All rights reserved. Apache 2.0 License.</span>
+      <span>
+        <a href="#">Privacy Policy</a> | 
+        <a href="#">Terms of Service</a> | 
+        <a href="#">Cookie Policy</a>
+      </span>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
