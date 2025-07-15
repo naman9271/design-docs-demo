@@ -228,90 +228,71 @@ main {
   color: #007aff;
 }
 
-/* Markdown Content
+/* Markdown Content Styling */
 .markdown-body {
-  background: #23242a;
-  color: #fff;
-  border-radius: 16px;
-  padding: 40px 48px 32px 48px;
-  margin: 0 auto 32px auto;
-  font-size: 1.15rem;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.10);
-  max-width: 900px;
-  min-width: 320px;
-  width: 100%;
-  display: block;
-  text-align: left;
-}
-.markdown-body h1, .markdown-body h2, .markdown-body h3 {
-  color: #fff;
-  font-weight: 700;
-  margin-top: 32px;
-  margin-bottom: 18px;
-  line-height: 1.2;
-  text-align: left;
-}
-.markdown-body h1 {
-  font-size: 2.5rem;
-}
-.markdown-body h2 {
-  font-size: 2rem;
-}
-.markdown-body h3 {
-  font-size: 1.5rem;
-}
-.markdown-body p {
-  margin-bottom: 20px;
-  color: #e5e5e5;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 32px 24px 24px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.04);
+  font-size: 1.08rem;
   line-height: 1.7;
-  font-size: 1.08em;
+  color: #222;
+}
+.markdown-body h1, .markdown-body h2, .markdown-body h3, .markdown-body h4, .markdown-body h5, .markdown-body h6 {
+  font-weight: 700;
+  margin-top: 2.2em;
+  margin-bottom: 0.7em;
+  line-height: 1.2;
+  color: #222;
+}
+.markdown-body h1 { font-size: 2.2rem; }
+.markdown-body h2 { font-size: 1.6rem; }
+.markdown-body h3 { font-size: 1.3rem; }
+.markdown-body p {
+  margin: 1.1em 0;
 }
 .markdown-body ul, .markdown-body ol {
-  margin: 18px 0 18px 32px;
-  color: #e5e5e5;
-  font-size: 1.08em;
+  margin: 1.2em 0 1.2em 2em;
+  padding: 0;
 }
 .markdown-body li {
-  margin-bottom: 10px;
-  line-height: 1.7;
-}
-.markdown-body blockquote {
-  border-left: 4px solid #007aff;
-  background: #23242a;
-  color: #bdbdbd;
-  margin: 18px 0;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-style: italic;
+  margin-bottom: 0.5em;
 }
 .markdown-body img {
   display: block;
-  margin: 36px auto 16px auto;
+  margin: 24px auto;
   max-width: 100%;
-  border-radius: 10px;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-.markdown-body em {
-  color: #bdbdbd;
-  font-style: italic;
-}
-.markdown-body code {
-  background: #18191f;
-  color: #ffecb3;
-  padding: 3px 8px;
-  border-radius: 5px;
-  font-size: 1em;
-}
-.markdown-body pre code {
-  display: block;
-  background: #18191f;
-  color: #ffecb3;
-  padding: 16px;
   border-radius: 8px;
-  font-size: 1em;
+}
+.markdown-body blockquote {
+  border-left: 4px solid #e5eaff;
+  background: #f7f7f9;
+  padding: 12px 24px;
+  margin: 1.5em 0;
+  color: #555;
+  border-radius: 6px;
+}
+.markdown-body code, .markdown-body pre {
+  background: #f7f7f9;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.98em;
+  color: #c7254e;
+}
+.markdown-body pre {
+  padding: 16px;
   overflow-x: auto;
-} */
+}
+.markdown-body a {
+  color: #007aff;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+.markdown-body a:hover {
+  color: #005bb5;
+}
 
 /* Table of Contents */
 .toc {
@@ -422,3 +403,29 @@ footer {
     max-width: 98vw;
   }
 }
+
+/* Badge styling for markdown content */
+.markdown-body img[src*="shields.io"],
+.markdown-body img[src*="badge"],
+.markdown-body img[src*="api.scorecard.dev"],
+.markdown-body img[src*="bestpractices.dev"],
+.markdown-body img[src*="artifacthub.io"],
+.markdown-body img[src*="github.com"][src*="badge"] {
+  display: inline-block !important;
+  margin: 4px !important;
+  vertical-align: middle;
+}
+
+/* Create a flex container for consecutive badge images */
+.markdown-body p:has(img[src*="shields.io"]),
+.markdown-body p:has(img[src*="badge"]),
+.markdown-body p:has(img[src*="api.scorecard.dev"]),
+.markdown-body p:has(img[src*="bestpractices.dev"]),
+.markdown-body p:has(img[src*="artifacthub.io"]) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 8px !important;
+  align-items: center !important;
+  margin: 18px 0 !important;
+}
+
