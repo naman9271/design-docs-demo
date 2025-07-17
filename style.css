@@ -429,3 +429,66 @@ footer {
   margin: 18px 0 !important;
 }
 
+/* Contributor section styling to match Figma design */
+.markdown-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.markdown-body table td {
+  padding: 16px 12px;
+  text-align: center;
+  vertical-align: top;
+  border: none;
+  background: #fff;
+}
+
+.markdown-body table td a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.markdown-body table td img {
+  width: 100px !important;
+  height: 100px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  margin: 0 auto 8px auto !important;
+  display: block !important;
+  border: 3px solid #f0f0f0;
+  transition: border-color 0.2s ease;
+}
+
+.markdown-body table td img:hover {
+  border-color: #007aff;
+}
+
+.markdown-body table td sub {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #007aff;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+.markdown-body table td a[title*="Contributed PRs"],
+.markdown-body table td a[title*="Reviewed Pull Requests"] {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 0.8rem;
+  color: #666;
+  text-decoration: none;
+}
+
+.markdown-body table td a[title*="Contributed PRs"]:hover,
+.markdown-body table td a[title*="Reviewed Pull Requests"]:hover {
+  color: #007aff;
+}
+
